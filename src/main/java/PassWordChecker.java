@@ -7,7 +7,7 @@ package main.java;
  */
 class PassWordChecker{
     public static void main(String[] args){
-        boolean isPassword = isPasswordValid("MAND56@#@$jhll");
+        boolean isPassword = isPasswordValid("MSdfbfdf####45");
         if(isPassword == true) System.out.println("The password is valid");
 
         System.out.println(isPassword);  
@@ -16,10 +16,10 @@ class PassWordChecker{
     if(password.length() < 8){
         return  false; // checking the length
     }else{
-     boolean hasLowercase = false;
-    boolean hasUpper = false;
-    boolean hasSpecialChar = false;
-    boolean hasNumber = false;
+        boolean hasLowercase = false;
+        boolean hasUpper = false;
+        boolean hasSpecialChar = false;
+        boolean hasNumber = false;
 
     // looping the password chars ..
     for(int i = 0 ; i < password.length(); i ++){
@@ -28,7 +28,7 @@ class PassWordChecker{
     if(Character.isUpperCase(letter)){
         hasUpper = true;
     }else if(Character.isLowerCase(letter)){
-        hasLowercase = false;
+        hasLowercase = true;
     }else if(Character.isDigit(letter)){
         hasNumber = true;
     }else if(!Character.isLetterOrDigit(letter)){
